@@ -1,70 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marquee Banner</title>
-  <style>
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Times New Roman', Times, serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Marquee</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: transparent; /* Light background color */
+            background-color: ffffff; /* Light background color */
+            font-family: 'Times New Roman', Times, serif;
+        }
 
-.marquee-container {
-  background-color: #0056b3; /* Navy blue background */
-  padding: 10px 0;
-  overflow: hidden;
-  position: relative;
-}
+        .marquee {
+            width: 90%; /* Adjust width to match the image */
+            margin: 20px auto; /* Center the marquee horizontally and add space on top */
+            background: #0056b3; /* Darker blue background */
+            color: white; /* Text color */
+            white-space: nowrap; /* Prevent line breaks */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; /* Rounded corners */
+            height: 60px; /* Height of the banner */
+            overflow: hidden; /* Hide the text overflow */
+            display: flex;
+            align-items: center; /* Vertically center the text */
+            padding: 0 20px; /* Padding for the sides */
+            position: relative;
+        }
 
-.marquee {
-  white-space: nowrap;
-  overflow: hidden;
-  box-sizing: border-box;
-}
+        .marquee p {
+            display: inline-block;
+            padding-left: 0; /* Start off-screen */
+            animation: marquee 15s linear infinite; /* Animation */
+            font-size: 24px; /* Font size for the marquee text */
+        }
 
-.marquee span {
-  display: inline-block;
-  padding-left: 100%; /* Start the text outside of the view */
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  animation: marquee 25s linear infinite; /* Speed & continuous scroll */
-}
-
-/* Marquee animation */
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%); /* Start with the text off-screen (to the right) */
+            }
+            100% {
+                transform: translateX(-100%); /* Move fully to the left */
+            }
+        }
     </style>
 </head>
 <body>
-  <div class="marquee-container">
     <div class="marquee">
-      <span>Reception Time: 8:00-16:00 (Excluding Saturdays, Sundays and Public Holidays) | Contact: +63-049-543-0121</span>
- div id="overview"></div>
-  </div>
-
-  <script>
-    // Optional: If you want to stop the animation when hovered, add this JS code.
-const marquee = document.querySelector('.marquee span');
-
-marquee.addEventListener('mouseover', () => {
-  marquee.style.animationPlayState = 'paused';
-});
-
-marquee.addEventListener('mouseout', () => {
-  marquee.style.animationPlayState = 'running';
-});
-
-  </script>
+        <p>Welcome to Gunma Gohkin Philippines Corporation Website!</p>
+    </div>
 </body>
 </html>
