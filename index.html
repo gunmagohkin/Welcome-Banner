@@ -15,38 +15,39 @@
         .marquee {
             width: 90%; /* Adjust width to match the image */
             margin: 20px auto; /* Center the marquee horizontally and add space on top */
-            background: #0056b3; /* Darker blue background to match the image */
+            background: #0056b3; /* Darker blue background */
             color: white; /* Text color */
             white-space: nowrap; /* Prevent line breaks */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px; /* Rounded corners to match the image */
+            border-radius: 10px; /* Rounded corners */
             height: 60px; /* Height of the banner */
             overflow: hidden; /* Hide the text overflow */
             display: flex;
             align-items: center; /* Vertically center the text */
             padding: 0 20px; /* Padding for the sides */
+            position: relative;
         }
 
         .marquee p {
             display: inline-block;
-            padding-left: 100%; /* Start from the right */
+            padding-left: 0; /* Start off-screen */
             animation: marquee 15s linear infinite; /* Animation */
-            font-size: 18px; /* Font size for the marquee text */
+            font-size: 24px; /* Font size for the marquee text */
         }
 
         @keyframes marquee {
             0% {
-                transform: translate(0, 0);
+                transform: translateX(100%); /* Start with the text off-screen (to the right) */
             }
             100% {
-                transform: translate(-100%, 0); /* Move to the left */
+                transform: translateX(-100%); /* Move fully to the left */
             }
         }
     </style>
 </head>
 <body>
     <div class="marquee">
-        <p>Welcome to Gunma Gohkin Philippines Website!</p>
+        <p>Welcome to Gunma Gohkin Philippines Corporation Website!</p>
     </div>
 </body>
 </html>
