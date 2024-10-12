@@ -18,7 +18,7 @@
             background: linear-gradient(to right, #0056b3, #00aaff); /* Gradient blue background */
             color: white; /* Text color */
             white-space: nowrap; /* Prevent line breaks */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for the marquee box */
             border-radius: 10px; /* Rounded corners */
             height: 60px; /* Height of the banner */
             overflow: hidden; /* Hide the text overflow */
@@ -34,6 +34,7 @@
             animation: marquee 15s linear infinite; /* Animation */
             font-size: 24px; /* Font size for the marquee text */
             position: relative; /* Allows positioning of text */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow effect */
         }
 
         @keyframes marquee {
